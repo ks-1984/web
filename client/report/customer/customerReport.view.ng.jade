@@ -1,0 +1,23 @@
+.main(layout='row')
+  span(flex='')
+  h2.md-display-1 Customer Report
+  span(flex='')
+
+.main(layout='row')
+  span(flex='')
+  div.tableWidth(layout='column')
+    table#customerList.display.hidden(cellspacing='0')
+        thead
+            tr
+                th Name
+                th Action
+        tfoot
+            tr
+                th Name
+                th Action
+        tbody
+            tr(ng-repeat='data in datas track by $index')
+                td {{data.name}}
+                td
+                    a(href='javascript:;', ng-click='delete(data._id, $index)') delete
+  span(flex='')

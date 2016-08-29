@@ -1,0 +1,43 @@
+.noMarginBottom{
+    margin-bottom: 0px;
+}
+
+.noMarginTop{
+    margin-top: 0px;
+}
+
+.top-46{
+    top: 46px;
+}
+
+.md-chips .md-chip-input-container > input { 
+    display: none; 
+}
+
+.chipLabel-inputFilled{
+    -webkit-transform: translate3d(0, 6px, 0) scale(0.75) !important;
+    transform: translate3d(0, 6px, 0) scale(0.75) !important;
+    color: rgba(0,0,0,0.54)!important;
+    width: 140%;
+}
+
+.option {
+  float: left;
+  width: 33%;
+  min-width: 140px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.option .md-item-text {
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.option .md-item-text h3,
+.option .md-item-text p {
+  padding: 0;
+  margin: 0;
+}

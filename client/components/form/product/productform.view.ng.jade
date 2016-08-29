@@ -1,0 +1,24 @@
+.main(layout='row')
+  span(flex='')
+  div(layout='column')
+    form.md-whiteframe-z1(ng-submit='save()', name='form', layout-padding='', novalidate='')
+      span(flex='', layout="row", layout-align="center center")
+        h1 Product Form
+
+      md-input-container.width-90(class='md-block')
+        label Product Id
+        input(ng-model='id', name='id', required='')
+        div(ng-messages='form.id.$error', role='alert')
+            div(ng-message='required') Please enter the product id
+
+      md-input-container.width-90(class='md-block')
+        label Product Name
+        input(ng-model='name', name='name', required='')
+        div(ng-messages='form.name.$error', role='alert')
+            div(ng-message='required') Please enter the product name
+
+      .main(layout='row')
+        span(flex='', layout="row", layout-align="center center")
+          input.md-button(type='submit', value='Submit')
+    div(layout='row', layout-padding='')
+  span(flex='')

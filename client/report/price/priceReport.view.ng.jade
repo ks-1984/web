@@ -1,0 +1,38 @@
+.main(layout='row')
+  span(flex='')
+  h2.md-display-1 Price Report
+  span(flex='')
+
+.main(layout='row')
+  span(flex='')
+  div.tableWidth(layout='column')
+    table#priceList.display.hidden(cellspacing='0')
+        thead
+            tr
+                th Created Date
+                th Customer
+                th Product
+                th Type
+                th Quantity
+                th Price
+                th Action
+        tfoot
+            tr
+                th Created Date
+                th Customer
+                th Product
+                th Type
+                th Quantity
+                th Price
+                th Action
+        tbody
+            tr(ng-repeat='data in datas track by $index')
+                td {{data.date}}
+                td {{data.customerName}}
+                td {{data.productId}}
+                td {{data.type}}
+                td {{data.quantity}}
+                td {{data.price}}
+                td
+                    a(href='javascript:;', ng-click='delete(data.id, $index)') delete
+  span(flex='')

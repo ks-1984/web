@@ -1,0 +1,71 @@
+.width-90{
+    width: 90%;
+}
+
+.container-top-minus-20{
+    top: -20px;
+}
+
+.loginError {
+    /* Position the hint */
+    position: absolute;
+    //left: 2px;
+    right: auto;
+    //padding-top: 5px;
+    bottom: 0px;
+    /* Copy styles from ng-messages */
+    font-size: 12px;
+    line-height: 14px;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    /* Set our own color */
+    color: rgb(221,44,0); 
+}
+.loginError.ng-hide,
+.loginError.ng-enter,
+.loginError.ng-leave.ng-leave-active {
+    bottom: 26px;
+    opacity: 0; 
+}
+.loginError.ng-leave,
+.loginError.ng-enter.ng-enter-active {
+    bottom: 0px;
+    opacity: 1;
+}
+
+.error {
+    /* Position the hint */
+    position: absolute;
+    //left: 2px;
+    right: auto;
+    //padding-top: 5px;
+    bottom: -12px;
+    /* Copy styles from ng-messages */
+    font-size: 12px;
+    line-height: 14px;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    /* Set our own color */
+    color: rgb(221,44,0); 
+}
+.error.ng-hide,
+.error.ng-enter,
+.error.ng-leave.ng-leave-active {
+    bottom: 26px;
+    opacity: 0; 
+}
+.error.ng-leave,
+.error.ng-enter.ng-enter-active {
+    bottom: -12px;
+    opacity: 1;
+}
+
+.redBox{
+    box-shadow: 0 1px rgb(221,44,0)!important;
+}
+
+.inputRedLine{
+    border-color: rgb(221,44,0)!important;
+}
+
+.redCheckBox{
+    border-color: rgb(221,44,0)!important;
+}

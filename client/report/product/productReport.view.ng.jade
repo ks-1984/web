@@ -1,0 +1,26 @@
+.main(layout='row')
+  span(flex='')
+  h2.md-display-1 Product Report
+  span(flex='')
+
+.main(layout='row')
+  span(flex='')
+  div.tableWidth(layout='column')
+    table#productList.display.hidden(cellspacing='0')
+        thead
+            tr
+                th Id
+                th Name
+                th Action
+        tfoot
+            tr
+                th Id
+                th Name
+                th Action
+        tbody
+            tr(ng-repeat='data in datas track by $index')
+                td {{data.id}}
+                td {{data.name}}
+                td
+                    a(href='javascript:;', ng-click='delete(data._id, $index)') delete
+  span(flex='')

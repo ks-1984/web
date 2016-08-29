@@ -1,0 +1,11 @@
+md-sidenav.md-sidenav-right.md-whiteframe-z2(md-component-id='right')
+    div(ng-repeat='item in list', layout-padding)
+      md-toolbar.pointer.toolbarCustom(ng-click='titleClick($event)')
+        div.md-toolbar-tools.heightAuto
+            h3 {{item.name}}
+      md-content(flex, ng-show='item.name')
+        md-list
+            md-list-item.pointer(ng-repeat='entry in item.info', md-ink-ripple='#3F51B5', ng-click='linkClick(entry.link)')
+                md-icon.material-icons(aria-label='{{entry.label}}') {{entry.icon}}
+                p {{entry.name}}
+            

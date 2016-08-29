@@ -1,0 +1,31 @@
+{
+  "servers": [
+    {
+      "host": "54.244.206.50",
+      "username": "ubuntu",
+      "pem": "/Users/kaisiang/Documents/kspersonal.pem"
+    }
+  ],
+
+  "setupMongo": true,
+
+  "setupNode": true,
+
+  "nodeVersion": "4.5.0",
+
+  "setupPhantom": true,
+
+  "enableUploadProgressBar": true,
+
+  "appName": "gdpWeb",
+
+  "app": "/Users/kaisiang/kaisiang/GlobalDeliveryPod/gdpWeb",
+
+  "env": {
+      "PORT": 80,
+      "ROOT_URL": "http://54.244.206.50",
+      "MONGO_URL": "mongodb://localhost:27017/sale"
+  },
+
+  "deployCheckWaitTime": 15
+}

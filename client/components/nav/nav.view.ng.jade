@@ -1,0 +1,6 @@
+md-toolbar.toolbar(layout='row', layout-align='start center', layout-padding='')
+  span(flex='')
+  .navbar-right
+    md-button.md-icon-button(ng-show="$state.current.name != 'login'", ng-click='toggleSidenav()')
+      md-icon.material-icons(aria-label='Menu') menu
+                    

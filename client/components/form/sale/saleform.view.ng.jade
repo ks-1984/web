@@ -1,0 +1,37 @@
+.main(layout='row')
+  span(flex='')
+  div(layout='column')
+    form.md-whiteframe-z1(ng-submit='save($event)', name='form', layout-padding='', novalidate='')
+      span(flex='', layout="row", layout-align="center center")
+        h1 Sale Form
+
+      md-input-container.width-90
+        label Customer Name
+        md-select(ng-model='customerName', name='customerName')
+          md-option(ng-repeat='customer in customers') {{customer}}
+
+      md-input-container.width-90(class='md-block')
+        label Price
+        input(ng-init='price = 0', ng-model='price', name='price', type='number', step='0.01', readonly='true')
+
+      md-input-container.width-90
+        label.chipLabel-inputFilled Products
+        md-chips(ng-init='productList = []', ng-model='productList', name='productList', md-separator-keys='ctrl.keys', md-on-remove='remove()', placeholder='Click on the product below to add to customer')
+          md-chip-template
+            strong {{$chip.name}}
+
+      md-input-container.width-90.noMarginBottom.md-input-has-placeholder
+        label.chipLabel-inputFilled Product List: (Click on the product below to add to customer)
+
+      .main(layout='row')
+        md-list
+          md-list-item.md-2-line.option(ng-repeat='product in products', layout='row', layout-wrap)
+            .md-item-text.md-whiteframe-z1(ng-click='addProduct(product.id)', flex)
+              h3 {{product.id}}
+              p {{product.name}}
+
+      .main(layout='row')
+        span(flex='', layout="row", layout-align="center center")
+          input.md-button(type='submit', value='Submit')
+    div(layout='row', layout-padding='')
+  span(flex='')
